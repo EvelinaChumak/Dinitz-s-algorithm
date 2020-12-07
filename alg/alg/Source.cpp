@@ -12,16 +12,6 @@ using namespace std;
 
 
 
-
-class comma : public numpunct<char> {
-public:
-    comma() : numpunct<char>() {}
-protected:
-    char do_decimal_point() const {
-        return ',';
-    }
-};
-
 class Timer
 {
 public:
@@ -62,7 +52,7 @@ int** gen_graf(int n) {
         matrix[i] = new int[n];
         for (int j = 0; j < n; ++j) {
             if (i < j)
-                matrix[i][j] = rand() % 100 + 1;
+                matrix[i][j] = rand() % 100 + 0;
             else
                 matrix[i][j] = 0;
         }
